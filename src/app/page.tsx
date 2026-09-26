@@ -64,12 +64,12 @@ export default function Home() {
 
   return (
     <>
-      {/* Background Glows & Image */}
-      <div className="absolute top-0 left-0 w-full h-[800px] opacity-15 mix-blend-screen pointer-events-none z-0 overflow-hidden">
-        <img src="/hero_bg.jpg" alt="Background" className="w-full h-full object-cover object-center grayscale contrast-150" />
+      {/* Global Fixed Background & Glows */}
+      <div className="fixed inset-0 w-full h-full opacity-15 mix-blend-screen pointer-events-none z-0 overflow-hidden">
+        <img src="/hero_bg.jpg" alt="Global Background" className="w-full h-full object-cover object-center grayscale contrast-150" />
       </div>
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-emerald-600/10 blur-[120px] pointer-events-none z-0"></div>
-      <div className="absolute bottom-[20%] right-[-10%] w-[30%] h-[40%] rounded-full bg-emerald-600/5 blur-[120px] pointer-events-none z-0"></div>
+      <div className="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-emerald-600/10 blur-[140px] pointer-events-none z-0"></div>
+      <div className="fixed bottom-[10%] right-[-10%] w-[40%] h-[50%] rounded-full bg-emerald-600/5 blur-[140px] pointer-events-none z-0"></div>
 
       {/* Header */}
       <header className="border-b border-zinc-800/80 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-50 transition-all font-mono">
@@ -191,7 +191,7 @@ export default function Home() {
       </section>
 
       {/* The Origin Story */}
-      <section id="architect" className="relative z-10 py-24 bg-zinc-950 border-y border-zinc-800/50">
+      <section id="architect" className="relative z-10 py-24 bg-zinc-950/80 backdrop-blur-sm border-y border-zinc-800/50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-8 h-[1px] bg-emerald-500"></div>
@@ -319,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* Terminal Contact Section */}
-      <section id="contact" className="relative z-10 border-t border-zinc-800/50 bg-black py-32">
+      <section id="contact" className="relative z-10 border-t border-zinc-800/50 bg-black/80 backdrop-blur-sm py-32">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Establish Connection</h2>
@@ -382,7 +382,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 border-t border-zinc-800/50 bg-zinc-950 py-12 text-center text-zinc-500 font-mono text-xs uppercase tracking-widest">
+      <footer className="relative z-10 border-t border-zinc-800/50 bg-zinc-950/80 backdrop-blur-sm py-12 text-center text-zinc-500 font-mono text-xs uppercase tracking-widest">
         EOF // &copy; 1989-2026 AsylumTech LLC.
       </footer>
     </>
