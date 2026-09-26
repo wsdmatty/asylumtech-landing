@@ -64,17 +64,20 @@ export default function Home() {
 
   return (
     <>
-      {/* Background Glows */}
+      {/* Background Glows & Image */}
+      <div className="absolute top-0 left-0 w-full h-[800px] opacity-15 mix-blend-screen pointer-events-none z-0 overflow-hidden">
+        <img src="/hero_bg.jpg" alt="Background" className="w-full h-full object-cover object-center grayscale contrast-150" />
+      </div>
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-emerald-600/10 blur-[120px] pointer-events-none z-0"></div>
       <div className="absolute bottom-[20%] right-[-10%] w-[30%] h-[40%] rounded-full bg-emerald-600/5 blur-[120px] pointer-events-none z-0"></div>
 
       {/* Header */}
       <header className="border-b border-zinc-800/80 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-50 transition-all font-mono">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="font-bold text-lg tracking-widest text-white flex items-center gap-3 uppercase">
+          <a href="#" className="font-bold text-lg tracking-widest text-white flex items-center gap-3 uppercase hover:opacity-90 transition-opacity">
             <div className={`w-2 h-2 ${isBooting && heroView === 'cli' ? 'bg-amber-500 animate-pulse' : 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]'}`}></div>
             Asylum<span className="text-emerald-500">Tech</span>
-          </div>
+          </a>
           <nav className="hidden md:flex gap-8 text-xs uppercase tracking-widest">
             <a href="#architect" className="text-zinc-500 hover:text-emerald-400 transition-colors">The Architect</a>
             <a href="#bento" className="text-zinc-500 hover:text-emerald-400 transition-colors">Infrastructure</a>
@@ -100,7 +103,7 @@ export default function Home() {
               I engineer, harden, and manage enterprise-grade servers and private AI environments. Bulletproof tech built by someone who has been tearing apart systems since the dawn of the web.
             </p>
             <p className="text-emerald-400/80">
-              The philosophy is simple: the best infrastructure is completely invisible. It's tech you never notice, never worry about, and never have to think about—because it just works.
+              The philosophy is simple: the best infrastructure is completely invisible. It's tech you never notice, never worry about, and never have to think about because it just works.
             </p>
           </div>
           <div className="flex gap-4">
@@ -246,8 +249,11 @@ export default function Home() {
           </div>
 
           {/* Small Card 1: Security */}
-          <div className="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 transition-colors p-8 flex flex-col">
+          <div className="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 transition-colors p-8 flex flex-col justify-between">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-transparent z-0"></div>
+            <div className="absolute top-0 right-0 w-full h-full opacity-20 mix-blend-overlay z-0">
+              <img src="/secure_baseline_bg.jpg" alt="Secure Baselining" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale contrast-125" />
+            </div>
             <div className="relative z-10">
               <div className="w-10 h-10 bg-black border border-cyan-500/30 flex items-center justify-center mb-4">
                 <Shield className="text-cyan-400 w-5 h-5" />
@@ -260,8 +266,11 @@ export default function Home() {
           </div>
 
           {/* Small Card 2: AI */}
-          <div className="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-emerald-500/50 transition-colors p-8 flex flex-col">
+          <div className="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-emerald-500/50 transition-colors p-8 flex flex-col justify-between">
              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent z-0"></div>
+             <div className="absolute top-0 right-0 w-full h-full opacity-20 mix-blend-overlay z-0">
+              <img src="/private_ai_bg.jpg" alt="Private AI Inference" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale contrast-125" />
+            </div>
              <div className="relative z-10">
               <div className="w-10 h-10 bg-black border border-emerald-500/30 flex items-center justify-center mb-4">
                 <Cpu className="text-emerald-400 w-5 h-5" />
@@ -293,6 +302,10 @@ export default function Home() {
 
           {/* Small Card 4: Support */}
           <div className="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-emerald-500/50 transition-colors p-8 flex flex-col justify-center items-center text-center">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent z-0"></div>
+            <div className="absolute top-0 right-0 w-full h-full opacity-25 mix-blend-overlay z-0">
+              <img src="/architect_access_bg.jpg" alt="Direct Architect Access" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale contrast-125" />
+            </div>
             <div className="relative z-10">
               <MessageSquare className="text-emerald-400 w-8 h-8 mx-auto mb-4" />
               <h3 className="text-lg font-bold text-white mb-2">Direct Architect Access</h3>
