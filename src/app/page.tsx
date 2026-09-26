@@ -91,13 +91,18 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono tracking-widest uppercase mb-8">
             <span className="w-2 h-2 bg-emerald-500 animate-ping"></span> Live Environment
           </div>
-          <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-6 leading-tight break-words">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
             Uncompromising <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Infrastructure.</span>
           </h1>
-          <p className="text-lg text-zinc-400 mb-10 leading-relaxed font-light">
-            I engineer, harden, and manage enterprise-grade servers and private AI environments. Bulletproof tech built by someone who has been tearing apart systems since the dawn of the web.
-          </p>
+          <div className="space-y-4 mb-10 text-lg text-zinc-400 leading-relaxed font-light">
+            <p>
+              I engineer, harden, and manage enterprise-grade servers and private AI environments. Bulletproof tech built by someone who has been tearing apart systems since the dawn of the web.
+            </p>
+            <p className="text-emerald-400/80">
+              The philosophy is simple: the best infrastructure is completely invisible. It's tech you never notice, never worry about, and never have to think about—because it just works.
+            </p>
+          </div>
           <div className="flex gap-4">
             <a href="#contact" className="bg-white text-zinc-950 hover:bg-zinc-200 px-8 py-4 font-bold transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] flex items-center gap-2">
               Deploy Now <ChevronRight size={18} />
